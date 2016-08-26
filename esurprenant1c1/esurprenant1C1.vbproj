@@ -120,6 +120,9 @@
     <EmbeddedResource Include="Star Wars.resx">
       <DependentUpon>Star Wars.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Toucan.resx">
+      <DependentUpon>Toucan.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
