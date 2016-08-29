@@ -56,7 +56,7 @@ Partial Class frmStarWars
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 4000
+        Me.Timer1.Interval = 3000
         '
         'Label1
         '

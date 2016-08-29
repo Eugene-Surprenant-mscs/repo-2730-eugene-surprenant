@@ -1,12 +1,9 @@
-﻿Public Class Toucan
+﻿Public Class frmToucan
     Private Sub Toucan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Me.Close()
 
-    End Sub
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim p As New Drawing2D.GraphicsPath()
         p.StartFigure()
@@ -19,6 +16,11 @@
         p.AddArc(New Rectangle(0, Me.Height - 40, 40, 40), 90, 90)
         p.CloseFigure()
         Me.Region = New Region(p)
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Me.Close()
 
     End Sub
 End Class
