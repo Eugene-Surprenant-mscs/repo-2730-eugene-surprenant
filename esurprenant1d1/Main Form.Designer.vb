@@ -50,7 +50,7 @@ Partial Class frmMain
         Me.lblTotalSales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblTotalSales.Location = New System.Drawing.Point(110, 230)
         Me.lblTotalSales.Name = "lblTotalSales"
-        Me.lblTotalSales.Size = New System.Drawing.Size(94, 27)
+        Me.lblTotalSales.Size = New System.Drawing.Size(47, 27)
         Me.lblTotalSales.TabIndex = 14
         Me.lblTotalSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '

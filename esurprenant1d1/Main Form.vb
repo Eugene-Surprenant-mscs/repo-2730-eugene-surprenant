@@ -22,11 +22,28 @@ Public Class frmMain
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         'Print the sales receipt
 
+        btnCalc.Visible = False
+        btnClear.Visible = False
+        btnExit.Visible = False
+        btnPrint.Visible = False
+
         PrintForm1.Print()
+
+        btnCalc.Visible = True
+        btnClear.Visible = True
+        btnExit.Visible = True
+        btnPrint.Visible = True
 
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
+        'Calculate number of items sold and total sales
+        lblTotalItems.Text = Val(txtDonuts.Text) + Val(TxtMuffins.Text)
+        lblTotalSales.Text = Val(lblTotalItems.Text) * 0.5
+        lblTotalSales.Text = Format(lblTotalSales.Text, "currency")
     End Sub
 End Class
