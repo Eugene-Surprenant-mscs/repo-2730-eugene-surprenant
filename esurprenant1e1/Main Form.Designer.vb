@@ -53,7 +53,7 @@ Partial Class frmMain
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(110, 20)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Assessed value:"
+        Me.Label2.Text = "&Assessed value:"
         '
         'Label3
         '
@@ -70,7 +70,7 @@ Partial Class frmMain
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(108, 31)
         Me.btnCalc.TabIndex = 5
-        Me.btnCalc.Text = "Calculate"
+        Me.btnCalc.Text = "&Calculate"
         Me.btnCalc.UseVisualStyleBackColor = True
         '
         'btnPrint
@@ -79,7 +79,7 @@ Partial Class frmMain
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(108, 31)
         Me.btnPrint.TabIndex = 6
-        Me.btnPrint.Text = "Print"
+        Me.btnPrint.Text = "&Print"
         Me.btnPrint.UseVisualStyleBackColor = True
         '
         'btnClear
@@ -88,7 +88,7 @@ Partial Class frmMain
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(108, 31)
         Me.btnClear.TabIndex = 7
-        Me.btnClear.Text = "Clear Screen"
+        Me.btnClear.Text = "C&lear Screen"
         Me.btnClear.UseVisualStyleBackColor = True
         '
         'btnExit
@@ -97,7 +97,7 @@ Partial Class frmMain
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(108, 31)
         Me.btnExit.TabIndex = 8
-        Me.btnExit.Text = "Exit"
+        Me.btnExit.Text = "&Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'lblTax
