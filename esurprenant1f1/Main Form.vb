@@ -2,8 +2,7 @@
 'Purpose:   Calculate the projected sales for upcoming year
 'Author:     Eugene Surprenant on 09/01/2016
 
-'Option Explicit On
-'Option Infer Off
+
 Option Strict On
 
 
