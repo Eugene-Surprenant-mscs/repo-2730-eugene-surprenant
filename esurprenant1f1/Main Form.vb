@@ -18,20 +18,12 @@ Public Class FrmMain
     Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
         'calculate the projected sales for each type of berry
 
-        ' lblProjStraw.Text = Val(txtProjIncrease.Text) * Val(txtStraw.Text) + Val(txtStraw.Text)
-        'lblProjBlue.Text = Val(txtProjIncrease.Text) * Val(txtBlue.Text) + Val(txtBlue.Text)
-        'lblProjRas.Text = Val(txtProjIncrease.Text) * Val(txtRas.Text) + Val(txtRas.Text)
-
-
 
         lblProjStraw.Text = Format(Val(txtProjIncrease.Text) * Val(txtStraw.Text) + Val(txtStraw.Text), "currency")
         lblProjBlue.Text = Format(Val(txtProjIncrease.Text) * Val(txtBlue.Text) + Val(txtBlue.Text), "currency")
         lblProjRas.Text = Format(Val(txtProjIncrease.Text) * Val(txtRas.Text) + Val(txtRas.Text), "Currency")
 
-        'format to currency
-        ' lblProjStraw.Text = Format(lblProjStraw.Text, "currency")
-        '  lblProjBlue.Text = Format(lblProjBlue.Text, "currency")
-        ' lblProjRas.Text = Format(lblProjRas.Text, "currency")
+
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -67,6 +59,10 @@ Public Class FrmMain
     End Sub
 
     Private Sub txtStraw_TextChanged(sender As Object, e As EventArgs) Handles txtStraw.TextChanged
+
+    End Sub
+
+    Private Sub lblProjincrease_Click(sender As Object, e As EventArgs) Handles lblProjincrease.Click
 
     End Sub
 End Class

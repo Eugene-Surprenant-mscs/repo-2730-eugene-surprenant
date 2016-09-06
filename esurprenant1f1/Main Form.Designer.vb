@@ -42,15 +42,17 @@ Partial Class FrmMain
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblProjincrease
         '
-        Me.lblProjincrease.AutoSize = True
         Me.lblProjincrease.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblProjincrease.Location = New System.Drawing.Point(43, 32)
+        Me.lblProjincrease.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblProjincrease.Location = New System.Drawing.Point(150, 11)
         Me.lblProjincrease.Name = "lblProjincrease"
-        Me.lblProjincrease.Size = New System.Drawing.Size(279, 21)
+        Me.lblProjincrease.Size = New System.Drawing.Size(152, 56)
         Me.lblProjincrease.TabIndex = 0
         Me.lblProjincrease.Text = "Projected &increase % (in decimal form):"
         '
@@ -105,7 +107,7 @@ Partial Class FrmMain
         Me.lblProjSales.Location = New System.Drawing.Point(288, 67)
         Me.lblProjSales.Name = "lblProjSales"
         Me.lblProjSales.Size = New System.Drawing.Size(115, 21)
-        Me.lblProjSales.TabIndex = 13
+        Me.lblProjSales.TabIndex = 12
         Me.lblProjSales.Text = "Projected Sales"
         Me.lblProjSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -143,7 +145,7 @@ Partial Class FrmMain
         Me.lblProjStraw.Location = New System.Drawing.Point(292, 104)
         Me.lblProjStraw.Name = "lblProjStraw"
         Me.lblProjStraw.Size = New System.Drawing.Size(100, 29)
-        Me.lblProjStraw.TabIndex = 15
+        Me.lblProjStraw.TabIndex = 13
         Me.lblProjStraw.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblProjBlue
@@ -153,7 +155,7 @@ Partial Class FrmMain
         Me.lblProjBlue.Location = New System.Drawing.Point(292, 156)
         Me.lblProjBlue.Name = "lblProjBlue"
         Me.lblProjBlue.Size = New System.Drawing.Size(100, 29)
-        Me.lblProjBlue.TabIndex = 16
+        Me.lblProjBlue.TabIndex = 14
         Me.lblProjBlue.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblProjRas
@@ -163,15 +165,16 @@ Partial Class FrmMain
         Me.lblProjRas.Location = New System.Drawing.Point(292, 208)
         Me.lblProjRas.Name = "lblProjRas"
         Me.lblProjRas.Size = New System.Drawing.Size(100, 29)
-        Me.lblProjRas.TabIndex = 17
+        Me.lblProjRas.TabIndex = 15
         Me.lblProjRas.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtProjIncrease
         '
-        Me.txtProjIncrease.Location = New System.Drawing.Point(328, 35)
+        Me.txtProjIncrease.Location = New System.Drawing.Point(308, 34)
         Me.txtProjIncrease.Name = "txtProjIncrease"
         Me.txtProjIncrease.Size = New System.Drawing.Size(67, 20)
         Me.txtProjIncrease.TabIndex = 1
+        Me.txtProjIncrease.Text = "0.05"
         Me.txtProjIncrease.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnCalc
@@ -192,7 +195,7 @@ Partial Class FrmMain
         Me.btnPrint.Location = New System.Drawing.Point(148, 260)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(75, 31)
-        Me.btnPrint.TabIndex = 10
+        Me.btnPrint.TabIndex = 16
         Me.btnPrint.Text = "&Print"
         Me.btnPrint.UseVisualStyleBackColor = True
         '
@@ -203,7 +206,7 @@ Partial Class FrmMain
         Me.btnClear.Location = New System.Drawing.Point(247, 260)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(75, 31)
-        Me.btnClear.TabIndex = 11
+        Me.btnClear.TabIndex = 10
         Me.btnClear.Text = "C&lear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
@@ -214,7 +217,7 @@ Partial Class FrmMain
         Me.btnExit.Location = New System.Drawing.Point(346, 260)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 31)
-        Me.btnExit.TabIndex = 12
+        Me.btnExit.TabIndex = 11
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -226,11 +229,22 @@ Partial Class FrmMain
         Me.PrintForm1.PrinterSettings = CType(resources.GetObject("PrintForm1.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
         Me.PrintForm1.PrintFileName = Nothing
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(118, 76)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 18
+        Me.PictureBox1.TabStop = False
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(444, 325)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnPrint)
@@ -251,6 +265,7 @@ Partial Class FrmMain
         Me.Name = "FrmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cranston Berries"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -274,4 +289,5 @@ Partial Class FrmMain
     Friend WithEvents btnClear As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents PrintForm1 As PowerPacks.Printing.PrintForm
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
