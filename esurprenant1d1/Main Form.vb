@@ -50,4 +50,8 @@ Public Class frmMain
     Private Sub lblTotalSales_Click(sender As Object, e As EventArgs) Handles lblTotalSales.Click
 
     End Sub
+
+    Private Sub lblTotalItems_Click(sender As Object, e As EventArgs) Handles lblTotalItems.Click
+
+    End Sub
 End Class
