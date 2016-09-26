@@ -9,12 +9,17 @@ Option Strict On
 
 Public Class frmMain
 
-    'class-level variable for storing salesclerk's name
-    Private strClerk As String
+
+
 
     Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
-        ' calculate number of items sold and total sales
 
+        'get the salesclerk's name
+
+        Const strPROMPT As String = "Salesclerk's name:"
+        Const strTITLE As String = "Name Entry"
+
+        ' calculate number of items sold and total sales
         Const decITEM_PRICE As Decimal = 0.5D
         Const decTAX_RATE As Decimal = 0.02D
         Dim intDonuts As Integer
@@ -23,6 +28,11 @@ Public Class frmMain
         Dim decSubtotal As Decimal
         Dim decSalesTax As Decimal
         Dim decTotalSales As Decimal
+        Static strClerk As String
+
+        'assign name to variable
+
+        strClerk = InputBox(strPROMPT, strTITLE, strClerk)
 
         'calculate total number of items sold
 
@@ -85,15 +95,17 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'get the salesclerk's name
+    Private Sub frmMain_DockChanged(sender As Object, e As EventArgs) Handles Me.DockChanged
 
-        Const strPROMPT As String = "Salesclerk's name:"
-        Const strTITLE As String = "Name Entry"
+    End Sub
 
-        'assign name to class-level variable
+    Private Sub ClearLabels(sender As Object, e As EventArgs) _
+        Handles txtDonuts.TextChanged, txtMuffins.TextChanged
+        'clear the total items, total sales, and message
 
-        strClerk = InputBox(strPROMPT, strTITLE)
+        lblTotalItems.Text = String.Empty
+        lblTotalSales.Text = String.Empty
+        lblMsg.Text = String.Empty
 
     End Sub
 End Class
