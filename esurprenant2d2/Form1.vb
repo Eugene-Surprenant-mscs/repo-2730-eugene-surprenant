@@ -23,20 +23,46 @@ Public Class Form1
 
     End Sub
     Private Sub ClearLabels(sender As Object, e As EventArgs) _
-        Handles txtAmDollar.TextChanged, txtPrice.TextChanged, txtPounds.TextChanged,
-        txtPrevious.TextChanged, txtCurrent.TextChanged, txtFirst.TextChanged, txtSecond.TextChanged
+        Handles txtAmDollar.TextChanged
+
         ' clear calculated amounts
 
         lblEuro.Text = String.Empty
         lblPound.Text = String.Empty
         lblRand.Text = String.Empty
-        lblTotalDue.Text = String.Empty
-        lblMonthlyBill.Text = String.Empty
-        lblQuotient.Text = String.Empty
+
     End Sub
+    Private Sub ClearLabels1(sender As Object, e As EventArgs) _
+        Handles txtPrice.TextChanged, txtPounds.TextChanged
+
+        ' clear calculated amounts
+
+        lblTotalDue.Text = String.Empty
+
+    End Sub
+
+    Private Sub ClearLabels2(sender As Object, e As EventArgs) _
+        Handles txtPrevious.TextChanged, txtCurrent.TextChanged
+
+        ' clear calculated amounts
+
+        lblMonthlyBill.Text = String.Empty
+
+    End Sub
+
+    Private Sub ClearLabels3(sender As Object, e As EventArgs) _
+        Handles txtFirst.TextChanged, txtSecond.TextChanged
+
+        ' clear calculated amounts
+
+        lblQuotient.Text = String.Empty
+
+    End Sub
+
     Private Sub btnConvert_Click(sender As Object, e As EventArgs) Handles btnConverteq.Click
         'convert American dollors to the Euro, the British pound, and the South African rand
         ' declare variables
+
         Const dblEURO_RATE As Double = 0.8976D
         Const dblPOUND_RATE As Double = 0.8049D
         Const dblRAND_RATE As Double = 13.9071D
@@ -56,11 +82,13 @@ Public Class Form1
             MessageBox.Show(strMSG, "Currecy Converter", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             ' calculate conversions
+
             dblEuro = dblDollar * dblEURO_RATE
             dblPound = dblDollar * dblPOUND_RATE
             dblRand = dblDollar * dblRAND_RATE
 
             ' display results
+
             lblEuro.Text = dblEuro.ToString("c2")
             lblPound.Text = dblPound.ToString("c2")
             lblRand.Text = dblRand.ToString("c2")
@@ -68,7 +96,9 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnConvertne.Click
+
         ' declare variables
+
         Const dblEURO_RATE As Double = 0.8976D
         Const dblPOUND_RATE As Double = 0.8049D
         Const dblRAND_RATE As Double = 13.9071D
@@ -85,12 +115,15 @@ Public Class Form1
         Double.TryParse(txtAmDollar.Text, dblDollar)
 
         If txtAmDollar.Text <> String.Empty Then
+
             ' calculate conversions
+
             dblEuro = dblDollar * dblEURO_RATE
             dblPound = dblDollar * dblPOUND_RATE
             dblRand = dblDollar * dblRAND_RATE
 
             ' display results
+
             lblEuro.Text = dblEuro.ToString("c2")
             lblPound.Text = dblPound.ToString("c2")
             lblRand.Text = dblRand.ToString("c2")
@@ -111,7 +144,9 @@ Public Class Form1
 
 
     Private Sub btncalculate1_Click(sender As Object, e As EventArgs) Handles btncalculate1.Click
+
         ' declare variables
+
         Const dblSHIPING_FEE As Double = 15
         Const strSHIPPING_MSG As String = "Should the customber be charged $15 for shipping?"
         Dim dblPounds As Double
@@ -120,13 +155,16 @@ Public Class Form1
         Dim dlgButton As DialogResult
 
         ' convert text to numbers
+
         Double.TryParse(txtPounds.Text, dblPounds)
         Double.TryParse(txtPrice.Text, dblPrice)
 
         ' calculate total
+
         dblTotal = dblPounds * dblPrice
 
         ' ask user if customer shouold be charged for shipping and apply accordingly. Then display result
+
         dlgButton = MessageBox.Show(strSHIPPING_MSG, "Tea Time", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1)
         If dlgButton = DialogResult.Yes Then
@@ -138,7 +176,9 @@ Public Class Form1
     End Sub
 
     Private Sub btnCalculate2_Click(sender As Object, e As EventArgs) Handles btnCalculate2.Click
+
         ' declare variables
+
         Const dblCHG_PER_UNIT As Double = 0.13
         Const strMSG As String = "Current reading must be greater than or equal to the previous reading."
         Dim dblCurrent As Double
@@ -146,11 +186,13 @@ Public Class Form1
         Dim dblBill As Double
 
         ' convert text to numbers
+
         Double.TryParse(txtCurrent.Text, dblCurrent)
         Double.TryParse(txtPrevious.Text, dblPrevious)
 
         ' display error message if text boxes are empty or the current reading is less thean the previous.
         ' Otherwise caculate and display the result
+
         If dblPrevious >= dblCurrent OrElse
             txtPrevious.Text = String.Empty OrElse
             txtCurrent.Text = String.Empty Then
@@ -169,10 +211,12 @@ Public Class Form1
         Dim dblQuotient As Double
 
         ' convert text to numbers
+
         Double.TryParse(txtFirst.Text, dblFirst)
         Double.TryParse(txtSecond.Text, dblSecond)
 
         ' swap numbers if necessary.
+
         If dblFirst < dblSecond Then
             Dim dblTemp As Double
             dblTemp = dblFirst
@@ -181,6 +225,7 @@ Public Class Form1
         End If
 
         ' display error when smaller number is 0. Otherwise calculate.
+
         If dblSecond = 0 Then
             MessageBox.Show("Cannot divide by 0", "Quotient", MessageBoxButtons.OK,
                             MessageBoxIcon.Information)
