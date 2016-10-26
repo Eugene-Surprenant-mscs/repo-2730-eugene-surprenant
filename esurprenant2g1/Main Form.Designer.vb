@@ -291,7 +291,7 @@ Partial Class frmMain
         Me.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Jetters"
+        Me.Text = "esurprenant2g1 Jetters"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
