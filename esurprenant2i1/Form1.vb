@@ -80,7 +80,6 @@ Public Class Form1
 
         Dim strRate As String
         Dim intLength As Integer
-        Dim dblTax As Double
         Dim dblRate As Double
         strRate = txt12.Text
         intLength = strRate.Length
